@@ -1,0 +1,6 @@
+uvicorn
+tensorflow
+httpx
+fastapi
+torch
+transformers
