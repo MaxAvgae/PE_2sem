@@ -28,6 +28,6 @@ def predict(item: Item):
     """Реализацияя предсказаний модели
 
     Returns:
-        tup: где на [0] стоит оценка "POSITIVE" или "NEGATIVE"
+        tup: где на [0] стоит оценка "POSITIVE" или "NEGATIVE."
     """
     return classifier(item.text)[0]
