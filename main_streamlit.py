@@ -37,7 +37,7 @@ def language_test(inputs):
 
     """
     lang = detect(inputs)
-    return lang == "en"
+    return lang != "ru"
 
 
 # Определение тональности текста.
