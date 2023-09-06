@@ -53,7 +53,6 @@ if context:
         label, score = sentiment_and_score(context)
         st.text(f"LABEL={label}\nSCORE={score}")
     else:
-        st.error("Язык не является английским",
-                 " или предложение слишком короткое")
+        st.error("Язык не является английским")
 else:
     st.error("Пустое поле ввода")
