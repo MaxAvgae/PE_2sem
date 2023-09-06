@@ -1,6 +1,6 @@
 from transformers import pipeline
 import streamlit as st
-from langdetect import detect
+from langid import classify
 
 
 # создаем пайплайн для определения тональности текста
@@ -36,8 +36,8 @@ def language_test(inputs):
         bool: True, если язык английский, False в противном случае.
 
     """
-    lang = detect(inputs)
-    return lang != "ru"
+    lang = classify(inputs)[0]
+    return lang == "en"
 
 
 # Определение тональности текста.
@@ -53,6 +53,7 @@ if context:
         label, score = sentiment_and_score(context)
         st.text(f"LABEL={label}\nSCORE={score}")
     else:
-        st.error("Язык не является английским")
+        st.error("Язык не является английским",
+                 " или предложение слишком короткое")
 else:
     st.error("Пустое поле ввода")

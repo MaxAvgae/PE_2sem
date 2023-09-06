@@ -4,4 +4,5 @@ httpx
 fastapi
 torch
 transformers
-langdetect
+langid
+
