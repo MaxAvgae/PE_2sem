@@ -3,7 +3,8 @@
 - Трокин Максим Александрович (РИМ-220963)<br>
 #### #3 Качество кода:<br>
    - [**1**](https://github.com/MaxAvgae/PI_2/pull/3), [**2**](https://github.com/MaxAvgae/PI_2/pull/1)<br>
-
+#### #4 Code review:<br>
+- [🤡](https://github.com/MaxAvgae/PI_2/pull/4)
 ## 2. Запуск средствами Streamlit на локальной машине.
 Установка Streamlit с помощью pip:<br>
 **`pip install streamlit`**<br>
