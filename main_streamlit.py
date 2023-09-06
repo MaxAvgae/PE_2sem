@@ -20,11 +20,22 @@ def sentiment_and_score(inputs):
 
     """
     pipe = get_pipeline()
+    # в результате работы получаем лист,
+    # в котором на 0 позиции стоит нужный нам dict
     result = pipe(inputs)[0]
     return result["label"], result["score"]
 
 
 def language_test(inputs):
+    """Проверяет, является ли язык текста английским.
+
+    Args:
+        inputs (str): Текст для проверки языка.
+
+    Returns:
+        bool: True, если язык английский, False в противном случае.
+
+    """
     lang = detect(inputs)
     return lang == "en"
 
@@ -38,6 +49,7 @@ context = st.text_input("CONTEXT:", value="Life is awesome!")
 result = st.button("ОПРЕДЕЛИТЬ ТОНАЛЬНОСТЬ")
 if context:
     if language_test(context):
+        # распаковываем кортеж из тональности и оценки
         label, score = sentiment_and_score(context)
         st.text(f"LABEL={label}\nSCORE={score}")
     else:
